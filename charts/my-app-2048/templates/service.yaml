@@ -4,6 +4,10 @@ metadata:
   name: {{ include "my-app-2048.fullname" . }}
   labels:
     {{- include "my-app-2048.labels" . | nindent 4 }}
+  annotations:
+    {{- with .Values.service.annotations }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
 spec:
   type: {{ .Values.service.type }}
   ports:
