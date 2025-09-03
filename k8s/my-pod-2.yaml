@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-2
+  namespace: yunez
+  labels:
+    app-code: nu0445001
+spec:
+  containers:
+  - image: nginx
+    name: my-container-1

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-replicaset-2048
+  namespace: yunez
+spec:
+  template:
+    metadata:
+      labels:
+        app-code: nu0445001
+    spec:
+      containers:
+      - name: app-2048
+        image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+  selector:
+    matchLabels:
+      app-code: nu0445001
+  replicas: 1
