@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: dojo-fernando1
+    the-best-team: yunesteamm
+  name: dojo-fernando1
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: dojo-juanosor
+  name: dojo-juanosor
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: dojo-juliango
+  name: dojo-juliango
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: dojo-mof-in
+    name: dojo-mof-in
+  name: dojo-mof-in
