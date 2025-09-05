@@ -1,13 +1,24 @@
-# Dojo kubernetes, helm y argo
+<h1>Dojo kubernetes, helm y argo</h1>
 
-## kubectl
+Contenido:
+- [kubectl](#kubectl)
+    - [descargar](#descargar)
+    - [instalar](#instalar)
+- [obtener credenciales de aws](#obtener-credenciales-de-aws)
+- [configurar repositorio](#configurar-repositorio)
+- [namespaces](#namespaces)
+    - [configuración imperativa](#configuración-imperativa)
+    - [configuración descriptiva](#configuración-descriptiva)
+    - [realizar cambios en recursos](#realizar-cambios-en-recursos)
+
+# kubectl
 
 <https://kubernetes.io/docs/tasks/tools/#kubectl>
 
-### descargar
+## descargar
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" 
 
-### instalar
+## instalar
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 validar:
@@ -21,7 +32,7 @@ Agregar el alias en la terminal y/o en ~/.bashrc para todas las terminales
     alias k="kubectl"
     echo "alias k=\"kubectl\"" >> ~/.bashrc
 
-## obtener credenciales de aws
+# obtener credenciales de aws
 
 Cuenta POC = DevOpseIngenieriaSBX
 
@@ -63,7 +74,7 @@ validar conexion con la api de kubernetes (eks)
 
     kubectl get pods
 
-## configurar repositorio
+# configurar repositorio
 
 Crear un repositorio **público**, puede ser en github.
 
@@ -80,7 +91,7 @@ mkdir k8s       # manifiestos
 mkdir charts    # helm
 ```
 
-## namespaces
+# namespaces
 
 Exploremos el cluster:
 
